@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuizWave</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">QuizWave</div>
+    <nav>
+      <button id="login-btn" class="nav-btn">Login</button>
+      <button id="register-btn" class="nav-btn">Register</button>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home-section">
+    <div class="home-content">
+      <h1>Challenge Your Knowledge!</h1>
+      <p>Over 100 questions in every category. Responsive, fun, and free. Ready to play?</p>
+      <button id="start-quiz-home" class="main-btn">Start Quiz</button>
+    </div>
+  </section>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <div id="auth-forms">
+        <form id="login-form" class="auth-form">
+          <h2>Login</h2>
+          <input type="email" id="login-email" placeholder="Email" required>
+          <input type="password" id="login-password" placeholder="Password" required>
+          <button type="submit">Login</button>
+          <div class="msg" id="login-msg"></div>
+        </form>
+        <form id="register-form" class="auth-form" style="display:none;">
+          <h2>Register</h2>
+          <input type="text" id="reg-name" placeholder="Full Name" required>
+          <input type="email" id="reg-email" placeholder="Email" required>
+          <input type="password" id="reg-password" placeholder="Password" required>
+          <input type="password" id="reg-password2" placeholder="Confirm Password" required>
+          <button type="submit">Register</button>
+          <div class="msg" id="register-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Setup -->
+  <section id="quiz-setup" style="display:none;">
+    <h2>Quiz Setup</h2>
+    <label for="category">Category:</label>
+    <select id="category"></select>
+    <label for="amount">Number of Questions:</label>
+    <input type="number" id="amount" min="10" max="100" value="20">
+    <button id="start-btn" class="main-btn">Start Quiz</button>
+    <button id="logout-btn" class="nav-btn" style="float:right;">Logout</button>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz-section" style="display:none;">
+    <div id="progress"></div>
+    <div id="question"></div>
+    <div id="answers"></div>
+    <button id="next-btn" style="display:none;">Next</button>
+  </section>
+
+  <!-- Result Section -->
+  <section id="result-section" style="display:none;">
+    <h2>Quiz Finished!</h2>
+    <p id="score"></p>
+    <button id="restart-btn" class="main-btn">Restart</button>
+    <button id="logout-btn2" class="nav-btn">Logout</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
